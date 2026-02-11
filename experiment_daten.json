@@ -1,0 +1,52 @@
+{
+  "Baseline (keine Kompression)": {
+    "original_tokens": 283.6666666666667,
+    "komprimierte_tokens": 283.6666666666667,
+    "kompressionsrate": 1.0,
+    "latenz_ms": 617.3347666678795,
+    "kosten_euro_pro_anfrage": 0.00039146,
+    "kosten_euro_pro_1k": 0.39146,
+    "kosten_euro_pro_1m": 391.46,
+    "qualitaet_prozent": 100.0
+  },
+  "Chunking (100 Tokens)": {
+    "original_tokens": 283.6666666666667,
+    "komprimierte_tokens": 278.0,
+    "kompressionsrate": 1.0389232866043614,
+    "latenz_ms": 606.5161666631466,
+    "kosten_euro_pro_anfrage": 0.00038364,
+    "kosten_euro_pro_1k": 0.38364,
+    "kosten_euro_pro_1m": 383.64,
+    "qualitaet_prozent": 91.53876105944315
+  },
+  "Manuelle Prompt-Kompression": {
+    "original_tokens": 283.6666666666667,
+    "komprimierte_tokens": 232.66666666666666,
+    "kompressionsrate": 1.2239950081243613,
+    "latenz_ms": 515.9423666669367,
+    "kosten_euro_pro_anfrage": 0.00032108,
+    "kosten_euro_pro_1k": 0.32108000000000003,
+    "kosten_euro_pro_1m": 321.08,
+    "qualitaet_prozent": 97.29829033215842
+  },
+  "Strukturierte Kompression": {
+    "original_tokens": 283.6666666666667,
+    "komprimierte_tokens": 161.0,
+    "kompressionsrate": 1.9863658354224392,
+    "latenz_ms": 2246.8191333337068,
+    "kosten_euro_pro_anfrage": 0.00022218,
+    "kosten_euro_pro_1k": 0.22218,
+    "kosten_euro_pro_1m": 222.17999999999998,
+    "qualitaet_prozent": 90.49540758132935
+  },
+  "Token-Budget (100 Tokens)": {
+    "original_tokens": 283.6666666666667,
+    "komprimierte_tokens": 71.66666666666667,
+    "kompressionsrate": 5.537117333899519,
+    "latenz_ms": 193.89273332916977,
+    "kosten_euro_pro_anfrage": 9.889999999999998e-05,
+    "kosten_euro_pro_1k": 0.09889999999999997,
+    "kosten_euro_pro_1m": 98.89999999999998,
+    "qualitaet_prozent": 60.06856660048167
+  }
+}

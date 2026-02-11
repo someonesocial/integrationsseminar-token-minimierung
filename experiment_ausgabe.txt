@@ -1,0 +1,271 @@
+
+============================================================
+Führe aus: 1token_berechnung_anfragen.py
+============================================================
+Test-Prompts geladen:
+  kundensupport: 264 Tokens
+  dokumentenzusammenfassung: 353 Tokens
+  code_review: 234 Tokens
+
+============================================================
+Führe aus: 2Kompressionsstrategien.py
+============================================================
+Kompressionsstrategien implementiert:
+  1. Regelbasierte Kompression (Floskeln, Redundanzen, optional Stoppwörter)
+  2. Strukturierte Kompression (LLMLingua-inspiriert: Embedding-Centrality)
+  3. Token-Budget (Selective Context / Lost in the Middle: positionsbasiert)
+  4. Chunking mit Überlappung (LongLLMLingua-inspiriert: Chunk-Repräsentationen)
+
+============================================================
+Führe aus: 3schaetzung_qualitat_aufgrund_kompression.py
+============================================================
+Lade Embedding-Modell für Qualitätsbewertung …
+Modell geladen.
+================================================================================
+EXPERIMENT-ERGEBNISSE: Token-Minimierungsstrategien (maschinelle Qualität)
+================================================================================
+
+📋 Test-Szenario: KUNDENSUPPORT
+------------------------------------------------------------
+
+  Baseline (keine Kompression):
+    Original: 264 Tokens → Komprimiert: 264 Tokens
+    Kompressionsrate: 1.00x
+    Latenz: 578.0 ms
+    Kosten: 0.000364 €
+    Qualität (semant. Ähnlichkeit): 100.0%
+
+  Manuelle Prompt-Kompression:
+    Original: 264 Tokens → Komprimiert: 201 Tokens
+    Kompressionsrate: 1.31x
+    Latenz: 452.9 ms
+    Kosten: 0.000277 €
+    Qualität (semant. Ähnlichkeit): 96.3%
+
+  Strukturierte Kompression:
+    Original: 264 Tokens → Komprimiert: 106 Tokens
+    Kompressionsrate: 2.49x
+    Latenz: 5743.5 ms
+    Kosten: 0.000146 €
+    Qualität (semant. Ähnlichkeit): 90.6%
+
+  Token-Budget (100 Tokens):
+    Original: 264 Tokens → Komprimiert: 97 Tokens
+    Kompressionsrate: 2.72x
+    Latenz: 244.6 ms
+    Kosten: 0.000134 €
+    Qualität (semant. Ähnlichkeit): 71.9%
+
+  Chunking (100 Tokens):
+    Original: 264 Tokens → Komprimiert: 214 Tokens
+    Kompressionsrate: 1.23x
+    Latenz: 478.6 ms
+    Kosten: 0.000295 €
+    Qualität (semant. Ähnlichkeit): 80.9%
+
+📋 Test-Szenario: DOKUMENTENZUSAMMENFASSUNG
+------------------------------------------------------------
+
+  Baseline (keine Kompression):
+    Original: 353 Tokens → Komprimiert: 353 Tokens
+    Kompressionsrate: 1.00x
+    Latenz: 756.0 ms
+    Kosten: 0.000487 €
+    Qualität (semant. Ähnlichkeit): 100.0%
+
+  Manuelle Prompt-Kompression:
+    Original: 353 Tokens → Komprimiert: 297 Tokens
+    Kompressionsrate: 1.19x
+    Latenz: 644.5 ms
+    Kosten: 0.000410 €
+    Qualität (semant. Ähnlichkeit): 97.0%
+
+  Strukturierte Kompression:
+    Original: 353 Tokens → Komprimiert: 143 Tokens
+    Kompressionsrate: 2.47x
+    Latenz: 478.9 ms
+    Kosten: 0.000197 €
+    Qualität (semant. Ähnlichkeit): 80.8%
+
+  Token-Budget (100 Tokens):
+    Original: 353 Tokens → Komprimiert: 95 Tokens
+    Kompressionsrate: 3.72x
+    Latenz: 240.7 ms
+    Kosten: 0.000131 €
+    Qualität (semant. Ähnlichkeit): 77.7%
+
+  Chunking (100 Tokens):
+    Original: 353 Tokens → Komprimiert: 320 Tokens
+    Kompressionsrate: 1.10x
+    Latenz: 690.6 ms
+    Kosten: 0.000442 €
+    Qualität (semant. Ähnlichkeit): 97.5%
+
+📋 Test-Szenario: CODE_REVIEW
+------------------------------------------------------------
+
+  Baseline (keine Kompression):
+    Original: 234 Tokens → Komprimiert: 234 Tokens
+    Kompressionsrate: 1.00x
+    Latenz: 518.0 ms
+    Kosten: 0.000323 €
+    Qualität (semant. Ähnlichkeit): 100.0%
+
+  Manuelle Prompt-Kompression:
+    Original: 234 Tokens → Komprimiert: 200 Tokens
+    Kompressionsrate: 1.17x
+    Latenz: 450.4 ms
+    Kosten: 0.000276 €
+    Qualität (semant. Ähnlichkeit): 98.6%
+
+  Strukturierte Kompression:
+    Original: 234 Tokens → Komprimiert: 234 Tokens
+    Kompressionsrate: 1.00x
+    Latenz: 518.1 ms
+    Kosten: 0.000323 €
+    Qualität (semant. Ähnlichkeit): 100.0%
+
+  Token-Budget (100 Tokens):
+    Original: 234 Tokens → Komprimiert: 23 Tokens
+    Kompressionsrate: 10.17x
+    Latenz: 96.4 ms
+    Kosten: 0.000032 €
+    Qualität (semant. Ähnlichkeit): 30.6%
+
+  Chunking (100 Tokens):
+    Original: 234 Tokens → Komprimiert: 300 Tokens
+    Kompressionsrate: 0.78x
+    Latenz: 650.4 ms
+    Kosten: 0.000414 €
+    Qualität (semant. Ähnlichkeit): 96.2%
+
+================================================================================
+
+============================================================
+Führe aus: 4ergebnisse_pandas.py
+============================================================
+DataFrame und agg_stats erzeugt (für Visualisierung und Detailauswertung).
+
+============================================================
+Führe aus: 5visualisierung.py
+============================================================
+KOSTENEINSPARUNGEN (in Mikro-Euro):
+------------------------------------------------------------
+  Chunking (100 Tokens):
+    Kosten: 400.0 μ€ (Baseline: 400.0 μ€)
+    Einsparung: 0.0%
+
+  Manuelle Prompt-Kompression:
+    Kosten: 300.0 μ€ (Baseline: 400.0 μ€)
+    Einsparung: 25.0%
+
+  Strukturierte Kompression:
+    Kosten: 200.0 μ€ (Baseline: 400.0 μ€)
+    Einsparung: 50.0%
+
+  Token-Budget (100 Tokens):
+    Kosten: 100.0 μ€ (Baseline: 400.0 μ€)
+    Einsparung: 75.0%
+
+
+✅ Visualisierung gespeichert: experiment_ergebnisse.png
+
+============================================================
+Führe aus: 6ergebnisse_detail.py
+============================================================
+KOSTENANALYSE (pro 1000 Anfragen):
+================================================================================
+Strategie                           Kosten/1K       Einsparung     
+--------------------------------------------------------------------------------
+Baseline (keine Kompression)        0.3915 €           (Referenz)     
+Chunking (100 Tokens)               0.3836 €              2.0%
+Manuelle Prompt-Kompression         0.3211 €             18.0%
+Strukturierte Kompression           0.2222 €             43.2%
+Token-Budget (100 Tokens)           0.0989 €             74.7%
+
+
+KOSTENANALYSE (pro 1 Million Anfragen):
+================================================================================
+Strategie                           Kosten/1M       Einsparung     
+--------------------------------------------------------------------------------
+Baseline (keine Kompression)        391.46 €           (Referenz)     
+Chunking (100 Tokens)               383.64 €              2.0%
+Manuelle Prompt-Kompression         321.08 €             18.0%
+Strukturierte Kompression           222.18 €             43.2%
+Token-Budget (100 Tokens)           98.90 €             74.7%
+
+
+ZUSAMMENFASSUNG DER EXPERIMENT-ERGEBNISSE:
+====================================================================================================
+                              Original Tokens  Komprimierte Tokens  Kompressionsrate  Latenz (ms)  Kosten (€)  Qualität (%)
+Strategie                                                                                                                  
+Baseline (keine Kompression)           283.67               283.67              1.00       617.33         0.0        100.00
+Chunking (100 Tokens)                  283.67               278.00              1.04       606.52         0.0         91.54
+Manuelle Prompt-Kompression            283.67               232.67              1.22       515.94         0.0         97.30
+Strukturierte Kompression              283.67               161.00              1.99      2246.82         0.0         90.50
+Token-Budget (100 Tokens)              283.67                71.67              5.54       193.89         0.0         60.07
+
+============================================================
+Führe aus: 7finale_ergebnisse.py
+============================================================
+====================================================================================================
+FINALE EXPERIMENT-ERGEBNISSE: Token-Minimierungsstrategien
+====================================================================================================
+
+📊 Baseline (keine Kompression)
+--------------------------------------------------------------------------------
+  Original Tokens:        284
+  Komprimierte Tokens:    284
+  Kompressionsrate:       1.00x
+  Latenz:                 617.3 ms
+  Kosten pro Anfrage:     0.000391 €
+  Kosten pro 1K Anfragen: 0.3915 €
+  Qualität:               100%
+
+📊 Chunking (100 Tokens)
+--------------------------------------------------------------------------------
+  Original Tokens:        284
+  Komprimierte Tokens:    278
+  Kompressionsrate:       1.04x
+  Latenz:                 606.5 ms
+  Kosten pro Anfrage:     0.000384 €
+  Kosten pro 1K Anfragen: 0.3836 €
+  Qualität:               92%
+
+📊 Manuelle Prompt-Kompression
+--------------------------------------------------------------------------------
+  Original Tokens:        284
+  Komprimierte Tokens:    233
+  Kompressionsrate:       1.22x
+  Latenz:                 515.9 ms
+  Kosten pro Anfrage:     0.000321 €
+  Kosten pro 1K Anfragen: 0.3211 €
+  Qualität:               97%
+
+📊 Strukturierte Kompression
+--------------------------------------------------------------------------------
+  Original Tokens:        284
+  Komprimierte Tokens:    161
+  Kompressionsrate:       1.99x
+  Latenz:                 2246.8 ms
+  Kosten pro Anfrage:     0.000222 €
+  Kosten pro 1K Anfragen: 0.2222 €
+  Qualität:               90%
+
+📊 Token-Budget (100 Tokens)
+--------------------------------------------------------------------------------
+  Original Tokens:        284
+  Komprimierte Tokens:    72
+  Kompressionsrate:       5.54x
+  Latenz:                 193.9 ms
+  Kosten pro Anfrage:     0.000099 €
+  Kosten pro 1K Anfragen: 0.0989 €
+  Qualität:               60%
+
+✅ Experiment-Daten gespeichert: experiment_daten.json
+
+============================================================
+Alle Skripte abgeschlossen.
+============================================================
+
+✅ Gesamte Ausgabe gespeichert: experiment_ausgabe.txt
