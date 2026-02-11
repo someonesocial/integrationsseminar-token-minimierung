@@ -9,7 +9,7 @@
 
 ## Präsentation
 
-Die Präsentation ist als PDF verfügbar: [`WON-23B Paul Klemm W1 Integrationsseminar Strategien zur Token-Minimierung in LLM-Anwendungen.pdf`](WON-23B Paul Klemm W1 Integrationsseminar Strategien zur Token-Minimierung in LLM-Anwendungen.pdf)  
+Die Präsentation ist als PDF verfügbar: [WON-23B Paul Klemm W1 Integrationsseminar Strategien zur Token-Minimierung in LLM-Anwendungen.pdf](WON-23B%20Paul%20Klemm%20W1%20Integrationsseminar%20Strategien%20zur%20Token-Minimierung%20in%20LLM-Anwendungen.pdf)
 Nachfolgend ist der gesamte Folieninhalt als Textversion eingebettet.
 
 ---
@@ -339,3 +339,4 @@ Bei GPT-4: Einsparungen × 20 (bis zu 5.860 €/Monat)
 ```bash
 pip install -r requirements.txt
 ```
+
